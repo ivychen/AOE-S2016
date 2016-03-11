@@ -1,0 +1,111 @@
+
+diameter =
+
+    50
+
+
+circumference =
+
+  157.0796
+
+
+area =
+
+   1.9635e+03
+
+ <strong>rand</strong> Uniformly distributed pseudorandom numbers.
+    R = <strong>rand</strong>(N) returns an N-by-N matrix containing pseudorandom values drawn
+    from the standard uniform distribution on the open interval(0,1).  <strong>rand</strong>(M,N)
+    or <strong>rand</strong>([M,N]) returns an M-by-N matrix.  <strong>rand</strong>(M,N,P,...) or
+    <strong>rand</strong>([M,N,P,...]) returns an M-by-N-by-P-by-... array.  <strong>rand</strong> returns a
+    scalar.  <strong>rand</strong>(SIZE(A)) returns an array the same size as A.
+ 
+    Note: The size inputs M, N, P, ... should be nonnegative integers.
+    Negative integers are treated as 0.
+ 
+    R = <strong>rand</strong>(..., CLASSNAME) returns an array of uniform values of the 
+    specified class. CLASSNAME can be 'double' or 'single'.
+ 
+    R = <strong>rand</strong>(..., 'like', Y) returns an array of uniform values of the 
+    same class as Y.
+ 
+    The sequence of numbers produced by <strong>rand</strong> is determined by the settings of
+    the uniform random number generator that underlies <strong>rand</strong>, RANDI, and RANDN.
+    Control that shared random number generator using RNG.
+ 
+    Examples:
+ 
+       Example 1: Generate values from the uniform distribution on the
+       interval [a, b].
+          r = a + (b-a).*rand(100,1);
+ 
+       Example 2: Use the RANDI function, instead of <strong>rand</strong>, to generate
+       integer values from the uniform distribution on the set 1:100.
+          r = randi(100,1,5);
+ 
+       Example 3: Reset the random number generator used by <strong>rand</strong>, RANDI, and
+       RANDN to its default startup settings, so that <strong>rand</strong> produces the same
+       random numbers as if you restarted MATLAB.
+          rng('default')
+          rand(1,5)
+ 
+       Example 4: Save the settings for the random number generator used by
+       <strong>rand</strong>, RANDI, and RANDN, generate 5 values from <strong>rand</strong>, restore the
+       settings, and repeat those values.
+          s = rng
+          u1 = rand(1,5)
+          rng(s);
+          u2 = rand(1,5) % contains exactly the same values as u1
+ 
+       Example 5: Reinitialize the random number generator used by <strong>rand</strong>,
+       RANDI, and RANDN with a seed based on the current time.  <strong>rand</strong> will
+       return different values each time you do this.  NOTE: It is usually
+       not necessary to do this more than once per MATLAB session.
+          rng('shuffle');
+          rand(1,5)
+ 
+    See <a href="matlab:helpview([docroot '\techdoc\math\math.map'],'update_random_number_generator')">Updating Your Random Number Generator Syntax</a> to use RNG to replace
+    <strong>rand</strong> with the 'seed', 'state', or 'twister' inputs.
+ 
+    See also <a href="matlab:help randi">randi</a>, <a href="matlab:help randn">randn</a>, <a href="matlab:help rng">rng</a>, <a href="matlab:help RandStream">RandStream</a>, <a href="matlab:help RandStream/rand">RandStream/rand</a>,
+             <a href="matlab:help sprand">sprand</a>, <a href="matlab:help sprandn">sprandn</a>, <a href="matlab:help randperm">randperm</a>.
+
+    <a href="matlab:matlab.internal.language.introspective.displayOverloads('rand')">Other functions named rand</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc rand">doc rand</a>
+
+
+rand1 =
+
+    0.9649
+
+
+rand2 =
+
+    0.1576
+
+
+rand3 =
+
+    0.9706
+
+
+plus_root =
+
+     3
+
+
+minus_root =
+
+    -3
+
+0 degrees Farenheit to Celcius: -17.7778
+70 degrees Farenheit to Celcius: 21.1111
+-50 degrees Farenheit to Celcius: -45.5556
+0 degrees Celcius to Farenheit: 32
+30 degrees Celcius to Farenheit: 48.6667
+-5 degrees Celcius to Farenheit: 29.2222
+0 degrees Farenheit to Kelvin: 255.3722
+67 degrees Farenheit to Kelvin: 292.5944
+-33 degrees Farenheit to Kelvin: 237.0389
