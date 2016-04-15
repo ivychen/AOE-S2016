@@ -16,19 +16,28 @@ function heat = heat_wave(D)
 [rows,cols] = size(D);
 numHeatWaves = 0;
 numDays = 0;
+tempDays = 0;
 
 col = 1;
-while col < cols
-    if D(1,col) > 90
+
+while col <= cols
+    while (D(1,col) >= 90)
+        tempDays = tempDays + 1;
+
+        if col + 1 <= cols
+            col = col + 1;
+        elseif col == cols
+            break
+        end
+    end
+    
+    if tempDays > 7
+        numDays = numDays + tempDays;
         numHeatWaves = numHeatWaves + 1;
     end
     
-    while D(1,col) > 90
-        numDays = numDays + 1;
-        if col + 1 <= cols
-            col = col + 1;
-        end
-    end
+    tempDays = 0;
+    
     col = col + 1;
 end
 

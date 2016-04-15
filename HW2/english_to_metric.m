@@ -12,6 +12,7 @@
 % empty matrix ( [] ).
 
 function metrify = english_to_metric(x, y)
+
 if strcmp(x,'L') == 1
     metrify = 3.785411784*y;
 elseif strcmp(x,'Kg') == 1
